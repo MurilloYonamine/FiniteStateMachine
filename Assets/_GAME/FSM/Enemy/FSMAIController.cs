@@ -54,12 +54,6 @@ public class FSMAIController : MonoBehaviour, IPauseable
         _agent = GetComponent<NavMeshAgent>();
         _audioSource = GetComponent<AudioSource>();
         _footstepAudio = gameObject.AddComponent<AudioSource>();
-        _footstepAudio.playOnAwake = false;
-        _footstepAudio.spatialBlend = 1f;
-        _footstepAudio.rolloffMode = AudioRolloffMode.Logarithmic;
-        _footstepAudio.minDistance = 1.5f;
-        _footstepAudio.maxDistance = 14f;
-        _footstepAudio.volume = 0.7f;
         _pauseManager = PauseManager.Instance;
         _path = new NavMeshPath();
     }
